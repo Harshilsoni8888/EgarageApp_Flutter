@@ -5,165 +5,93 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('About Us Page')),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+    home: Scaffold(
+      backgroundColor: Colors.blueAccent,
+    appBar: AppBar(
+    title: Text('Profile Page'),
+    ),
+    body: SingleChildScrollView(
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+    child: Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+    CircleAvatar(
+    radius: 60,
+    backgroundImage: AssetImage('assets/profile.png'),
+    ),
+    SizedBox(height: 20),
+    Text(
+    'Harshil Mandali',
+    style: TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    ),
+    ),
+    SizedBox(height: 10),
+    Text(
+    'Software Developer &',
+    style: TextStyle(
+    fontSize: 16,
+    color: Colors.white,
+    ),
+    ),
+      Text(
+        'Team Lead',
+        style: TextStyle(
+          fontSize: 16,
+          color: Colors.white,
+        ),
       ),
-      body: SingleChildScrollView(
-       child: Container(
-         child: Column(
-           children: [
-             Center(
-               child: Text("Our core team",style: GoogleFonts.lato(
-                 textStyle: Theme.of(context).textTheme.headline5,
-                 fontSize: 30,
-                 fontWeight: FontWeight.w700,
-                 fontStyle: FontStyle.italic,
-               ),
-               ),
-             ),
-             SizedBox(height: 30,),
-             Row(
-               children: [
-                 SizedBox(height: 90,width: 90,
-                   child: CircleAvatar(
-                     child: ClipOval(
-                       child: Image.network("https://i.pinimg.com/736x/b0/ce/89/b0ce89c349573bae1264017ce5deb3b7.jpg",
-                         width: 120,
-                         height: 120,
-                         fit: BoxFit.cover,),
+    SizedBox(height: 20),
+    _buildSection('About Me', 'Passionate developer with a love for creating useful and innovative apps.'),
+    _buildSection('Personal Details', 'Location: Maninagar, Ahmedabad, India',),
+    _buildSection('Social Media', 'Twitter  X: @harshilsoni8888\nLinkedIn: linkedin.com/in/harshil-mandali'),
+    ],
+    ),
+    ),
+    ),
+    );
+  }
 
-                     ),
-                   ),
-                 ),
-                 SizedBox(width: 20,),
-                 Text("Harshil",style: GoogleFonts.lato(
-                   textStyle: Theme.of(context).textTheme.headline5,
-                   fontSize: 30,
-                   fontWeight: FontWeight.w700,
-                   fontStyle: FontStyle.italic,
-                 ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(16.0),
-                   child: Text("Full-Stack",style: GoogleFonts.lato(
-                     textStyle: Theme.of(context).textTheme.headline5,
-                     fontSize: 20,
-                     fontWeight: FontWeight.w700,
-
-                   ),
-                   ),
-                 ),
-               ],
-             ),
-             SizedBox(height: 20,),
-             Row(
-               children: [
-                 SizedBox(height: 90,width: 90,
-                   child: CircleAvatar(
-                     child: ClipOval(
-                       child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEikMfVIcVZaky4pqrNp8DzgA2pXyTUvR9Pog8vUP5w&usqp=CAU&ec=48600113",
-                         width: 120,
-                         height: 120,
-                         fit: BoxFit.cover,),
-
-                     ),
-                   ),
-                 ),
-                 SizedBox(width: 20,),
-                 Text("Preet",style: GoogleFonts.lato(
-                   textStyle: Theme.of(context).textTheme.headline5,
-                   fontSize: 30,
-                   fontWeight: FontWeight.w700,
-                   fontStyle: FontStyle.italic,
-                 ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(16.0),
-                   child: Text("Full-Stack",style: GoogleFonts.lato(
-                     textStyle: Theme.of(context).textTheme.headline5,
-                     fontSize: 20,
-                     fontWeight: FontWeight.w700,
-                   ),
-                   ),
-                 ),
-               ],
-             ),
-             SizedBox(height: 30,),
-             Row(
-               children: [
-                 SizedBox(height: 90,width: 90,
-                   child: CircleAvatar(
-                     child: ClipOval(
-                       child: Image.network("https://images-platform.99static.com//mqanMbdGlKQJLDgZhjlMg4LoJPo=/0x0:960x961/fit-in/500x500/99designs-contests-attachments/122/122171/attachment_122171562",
-                         width: 120,
-                         height: 120,
-                         fit: BoxFit.cover,),
-
-                     ),
-                   ),
-                 ),
-                 SizedBox(width: 14,),
-                 Text("Devarsh",style: GoogleFonts.lato(
-                   textStyle: Theme.of(context).textTheme.headline5,
-                   fontSize: 30,
-                   fontWeight: FontWeight.w700,
-                   fontStyle: FontStyle.italic,
-                 ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(16.0),
-                   child: Text("Full-Stack",style: GoogleFonts.lato(
-                     textStyle: Theme.of(context).textTheme.headline5,
-                     fontSize: 20,
-                     fontWeight: FontWeight.w700,
-
-                   ),
-                   ),
-                 ),
-               ],
-             ),
-             SizedBox(height: 30,),
-             Row(
-               children: [
-                 SizedBox(height: 90,width: 90,
-                   child: CircleAvatar(
-                     child: ClipOval(
-                       child: Image.network("https://fiverr-res.cloudinary.com/t_mobile_web_2,q_auto,f_auto/gigs/283000353/original/fc44643fcb43e364ce136924d11ccacb6a9c3b54.png",
-                         width: 120,
-                         height: 160,
-                         fit: BoxFit.cover,),
-
-                     ),
-                   ),
-                 ),
-                 SizedBox(width: 20,),
-                 Text("Kushi",style: GoogleFonts.lato(
-                   textStyle: Theme.of(context).textTheme.headline5,
-                   fontSize: 30,
-                   fontWeight: FontWeight.w700,
-                   fontStyle: FontStyle.italic,
-                 ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(16.0),
-                   child: Text("Front-end ",style: GoogleFonts.lato(
-                     textStyle: Theme.of(context).textTheme.headline5,
-                     fontSize: 20,
-                     fontWeight: FontWeight.w700,
-
-                   ),
-                   ),
-                 ),
-               ],
-             ),
-
-           ],
-         ),
-       ),
-        
+  Widget _buildSection(String title, String content) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
       ),
-
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 10),
+          Text(
+            content,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

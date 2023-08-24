@@ -186,6 +186,7 @@ class _ServicespageState extends State<Servicespage> {
                             children: [
                               Text("Address : ",style: TextStyle(fontSize: 19,
                                 fontWeight: FontWeight.bold,
+
                                 color: Colors.black87,),),
                               Text(garage[index]['street'].toString(),
                                 style: TextStyle(

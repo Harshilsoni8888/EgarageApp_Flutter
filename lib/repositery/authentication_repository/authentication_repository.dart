@@ -66,21 +66,21 @@ class AuthenticationRepository extends GetxController {
     } on FirebaseAuthException catch (e) {
       final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
       if (e.code == 'invalid-email') {
-        Get.snackbar('error', 'Invalid Email address');
+        Get.snackbar('Invalid Email address', 'Please try different');
       } else {
         Get.snackbar('Invalide Email', 'try again');
       }
       if (e.code == 'weak-password') {
         Get.snackbar('Weakpassword', 'Invalid Password');
       } else {
-        Get.snackbar('Enter strong password', 'Eg-user2345');
+        Get.snackbar('Enter strong password', 'Eg-user@2345');
       }
-      print('FIREBASE AUTH EXCEPTION-${ex.message}');
-      if (e.code == 'email-already-in-use') {
-        Get.snackbar('Email exist', 'Try different Email address');
-      } else {
-        Get.snackbar('Email already exist', 'try again');
-      }
+      // print('FIREBASE AUTH EXCEPTION-${ex.message}');
+      // if (e.code == 'email-already-in-use') {
+      //   Get.snackbar('Email exist', 'Try different Email address');
+      // } else {
+      //   Get.snackbar('Email already exist', 'try again');
+      // }
       //
       throw ex;
     } catch (_) {
